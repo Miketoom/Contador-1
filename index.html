@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador por pasos</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #contador {
+      font-size: 10rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="contador">100</div>
+
+  <script>
+    let contador = 100;
+    const elemento = document.getElementById("contador");
+
+    document.body.addEventListener("click", () => {
+      if (contador > 0) {
+        contador--;
+        elemento.textContent = contador;
+      }
+    });
+  </script>
+</body>
+</html>
